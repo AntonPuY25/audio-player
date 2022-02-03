@@ -3,7 +3,117 @@ body{
     margin: 0;
 }
 .container {
-    background-color: #c9c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 500px;
+    height: 100vh;
 }
+.player {
+    width: 250pt;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.name-song {
+    height: 60%;
+    background-color: aliceblue;
+}
+.menu{
+    height: 40%;
+    background: -webkit-linear-gradient(
+            45deg
+            , rgb(40, 40, 40), rgb(133, 133, 133));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+.menu img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.singer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #CAEB67;
+}
+.play-btn{
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/img/play.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.pause-btn{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-image: url('../assets/img/pause.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.song{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+.player-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.name-singer {
+    display: flex;
+    flex-direction: column;
+
+}
+.btn-control {
+    display: flex;
+    flex-direction: column;
+}
+.btn-control img{
+    width: 35px;
+    height: 35px;
+}
+.audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 60px;
+}
+.audio-progress{
+    margin-top: 5px;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    cursor: pointer;
+}
+.progress{
+    background-color: #CAEB67;
+    width: 7px;
+    height: 10px;
+    position: relative;
+    bottom: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.currentTime{
+    display: flex;
+    color: white;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.duration{
+    width: 80%;
+    display: flex;
+    color: #CAEB67;
+    justify-content: flex-end;
+}
+

@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <script src="main.js" defer type="module"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
     <title>Audio-Player</title>
 </head>
 <body>
 <div class="container">
-    Audio-Player
+    <div class="player">
+    <div class="name-song">
+
+    </div>
+        <div class="menu">
+            <div class="player-control">
+                <div class="play-btn"></div>
+                <div class="pause-btn"></div>
+                <div class="name-singer">
+                    <span class="singer"></span>
+                    <span class="song"></span>
+                </div>
+                <div class="btn-control">
+                    <img class="prev" src="assets/img/backward.png" alt="back"/>
+                    <img class="next" src="assets/img/forward.png" alt="forward"/>
+                </div>
+            </div>
+            <audio src="assets/sounds/1.mp3"></audio>
+            <div class="duration"></div>
+              <div class="audio-container">
+                  <div class="audio-progress">
+                      <div class="progress"></div>
+                  </div>
+
+
+          </div>
+            <div class="currentTime"></div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
