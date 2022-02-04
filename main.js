@@ -13,8 +13,8 @@ const currentTimeDiv = document.querySelector('.currentTime');
 const durationDiv = document.querySelector('.duration');
 
 const arrSongs = [
-    {sing: 1, singer: 'Beyonce',song: 'Don\'t Hurt Yourself', img:'/assets/img/lemonade.png'},
-    {sing: 2, singer: 'Dua Lipa',song: 'Don\'t Start Now', img:'/assets/img/dontstartnow.png'}]
+    {sing: 1, singer: 'Beyonce',song: 'Don\'t Hurt Yourself', img:'assets/img/lemonade.png'},
+    {sing: 2, singer: 'Dua Lipa',song: 'Don\'t Start Now', img:'assets/img/dontstartnow.png'}]
 let currentSong = 0;
 let x = 0;
 let triggerMouse = false;
@@ -44,7 +44,7 @@ nextBtn.addEventListener('click',()=>{
         currentSong = 0;
     }
     setCurrentSingerAndSong()
-    audio.src = `/assets/sounds/${arrSongs[currentSong].sing}.mp3`
+    audio.src = `assets/sounds/${arrSongs[currentSong].sing}.mp3`
     audio.currentTime = 0;
     audio.play();
     singer.textContent = arrSongs[currentSong].singer
@@ -59,7 +59,7 @@ prevBtn.addEventListener('click',()=>{
         currentSong = arrSongs.length -1;
     }
     setCurrentSingerAndSong()
-    audio.src = `/assets/sounds/${arrSongs[currentSong].sing}.mp3`
+    audio.src = `assets/sounds/${arrSongs[currentSong].sing}.mp3`
     audio.currentTime = 0;
     audio.play();
     playBtn.style.display= 'none'
