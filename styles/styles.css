@@ -18,7 +18,28 @@ body{
 .name-song {
     height: 60%;
     background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.name{
+    background: black;
+    border-radius:100px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #CAEB67;
+}
+.active{
+    animation: rotateAnimation 3s linear infinite;
+}
+
 .menu{
     height: 40%;
     background: -webkit-linear-gradient(
@@ -72,7 +93,6 @@ body{
 .name-singer {
     display: flex;
     flex-direction: column;
-
 }
 .btn-control {
     display: flex;
@@ -116,4 +136,21 @@ body{
     color: #CAEB67;
     justify-content: flex-end;
 }
+.pause-btn:hover,
+.play-btn:hover{
+    transition:  .5s ease-out all;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    animation: rotateAnimation 3s linear infinite;
+}
 
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}

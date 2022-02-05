@@ -11,6 +11,7 @@ const picturePlayer = document.querySelector('.name-song');
 const container = document.querySelector('.container');
 const currentTimeDiv = document.querySelector('.currentTime');
 const durationDiv = document.querySelector('.duration');
+const nameSong = document.querySelector('.name');
 
 const arrSongs = [
     {sing: 1, singer: 'Beyonce',song: 'Don\'t Hurt Yourself', img:'assets/img/lemonade.png'},
@@ -32,6 +33,7 @@ function setCurrentSingerAndSong() {
     container.style.backgroundSize = 'cover'
     durationDiv.textContent = `${minutesDuration} : ${secondsDuration}`
     currentTimeDiv.textContent = '0 : 00'
+    nameSong.textContent = arrSongs[currentSong].song;
 
 }
 window.onload = () => {
@@ -51,6 +53,7 @@ nextBtn.addEventListener('click',()=>{
     song.textContent = arrSongs[currentSong].song
     playBtn.style.display= 'none'
     pauseBtn.style.display= 'block'
+    nameSong.classList.add('active');
 })
 
 prevBtn.addEventListener('click',()=>{
@@ -64,6 +67,7 @@ prevBtn.addEventListener('click',()=>{
     audio.play();
     playBtn.style.display= 'none'
     pauseBtn.style.display= 'block'
+    nameSong.classList.add('active');
 })
 
 function playAudio(currentTime) {
@@ -71,12 +75,14 @@ function playAudio(currentTime) {
     audio.play();
     playBtn.style.display= 'none'
     pauseBtn.style.display= 'block'
+    nameSong.classList.add('active');
 }
 
 function pauseAudio() {
     audio.pause();
     playBtn.style.display= 'block'
     pauseBtn.style.display= 'none'
+    nameSong.classList.remove('active')
 }
 
 function progressSong(e) {
@@ -108,7 +114,6 @@ function setProgressSong(e) {
     }
 
 }
-
 
 progressContainer.addEventListener('mousemove',setProgressSong)
 progressContainer.addEventListener('click',setProgressSong)
