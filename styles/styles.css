@@ -4,6 +4,7 @@ body{
 }
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -145,7 +146,54 @@ body{
     animation: rotateAnimation 3s linear infinite;
 }
 
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 2%;
+    width: 200px;
+}
 
+.left-part{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    width: 12%;
+
+}
+.left-part a:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: .3s;
+}
+
+.middle-part{
+    width: 100px;
+
+}
+footer a{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    position: relative;
+    left:7px;
+}
+footer a:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: .3s;
+}
 @keyframes rotateAnimation {
     0% {
         transform: rotate(0)
